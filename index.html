@@ -377,6 +377,31 @@
             </div>
           </div>
         </div>
+        <div class="newsletter-footer">
+          <p class="join-newsletter">Zapisz się do newslettera</p>
+          <form
+            class="signup-form"
+            name="signup-form"
+            autocomplete="on"
+            novalidate
+          >
+            <label>
+              <input
+                class="e-mail-footer"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+            </label>
+
+            <button class="submit-footer" type="submit">
+              Zapisz się
+              <svg class="joinus-icon" width="24px" height="24px">
+                <use href="./images/forms-icon.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -386,6 +411,84 @@
             <use href="./images/close-modal.svg#icon-close-modal"></use>
           </svg>
         </button>
+        <p class="modal-form-header">Zostaw swoje dane w formularzu poniżej</p>
+        <form class="my-form">
+          <fieldset class="fieldset">
+            <label for="name" name="name">Imię</label>
+            <svg class="icon" title>
+              <use
+                href="./images/forms-icon.svg#icon-name"
+                width="12px"
+                height="12px"
+              ></use>
+            </svg>
+            <input class="input-form" type="text" id="name" />
+          </fieldset>
+          <fieldset class="fieldset">
+            <label for="phone" name="phone">Telefon</label>
+            <svg class="icon" title>
+              <use href="./images/forms-icon.svg#icon-phone"></use>
+            </svg>
+            <input
+              class="input-form"
+              type="tel"
+              id="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+            />
+          </fieldset>
+          <fieldset class="fieldset">
+            <label for="mail" name="mail">Email</label>
+            <svg class="icon" title>
+              <use href="./images/forms-icon.svg#icon-email"></use>
+            </svg>
+            <input class="input-form" type="email" id="mail" />
+          </fieldset>
+          <fieldset class="fieldset">
+            <label for="comment" name="comment">Komentarz</label>
+            <input
+              class="input-comment"
+              type="text"
+              id="text"
+              placeholder="Wprowadź tekst"
+            />
+          </fieldset>
+          <label class="legal-checkbox" name="legal-checkbox">
+            <svg class="icon" title>
+              <use href="./images/forms-icon.svg#icon-check"></use>
+            </svg>
+            <input class="my-input" type="checkbox" id="legal" />
+            Oświadczam iż akceptuję
+            <a class="reg-priv" href="#"> Regulamin</a> i
+            <a class="reg-priv" href="#">Politykę Prywatności.</a>
+          </label>
+          <button class="submit" type="submit" name="submit">Wyślij</button>
+        </form>
+        <!-- <form autocomplete="on">
+          <fieldset class="fieldset">
+            <label
+              >Imię<input class="input-form" type="name" name="name"
+            /></label>
+          </fieldset>
+          <fieldset class="fieldset">
+            <label
+              >Telefon<input class="input-form" type="phone" name="phone"
+            /></label>
+          </fieldset>
+          <fieldset class="fieldset">
+            <label
+              >E-mail<input class="input-form" type="mail" name="mail"
+            /></label>
+          </fieldset>
+          <fieldset class="fieldset">
+            <label
+              >Komentarz<input
+                class="input-form-comment"
+                type="text"
+                name="text"
+                placeholder="Wprowadź tekst"
+            /></label>
+          </fieldset>
+        </form> -->
       </div>
     </div>
     <script src="./js/modal.js"></script>
