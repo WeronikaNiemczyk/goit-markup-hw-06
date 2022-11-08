@@ -411,10 +411,12 @@
             <use href="./images/close-modal.svg#icon-close-modal"></use>
           </svg>
         </button>
-        <p class="modal-form-header">Zostaw swoje dane w formularzu poniżej</p>
-        <form class="my-form">
+        <form class="my-form" autocomplete="on">
+          <p class="modal-form-header">
+            Zostaw swoje dane w formularzu poniżej
+          </p>
           <fieldset class="fieldset">
-            <label for="name" name="name">Imię</label>
+            <label for="name">Imię</label>
             <svg class="icon" title>
               <use
                 href="./images/forms-icon.svg#icon-name"
@@ -422,10 +424,10 @@
                 height="12px"
               ></use>
             </svg>
-            <input class="input-form" type="text" id="name" />
+            <input class="input-form" type="text" id="name" name="name" />
           </fieldset>
           <fieldset class="fieldset">
-            <label for="phone" name="phone">Telefon</label>
+            <label for="phone">Telefon</label>
             <svg class="icon" title>
               <use href="./images/forms-icon.svg#icon-phone"></use>
             </svg>
@@ -433,62 +435,43 @@
               class="input-form"
               type="tel"
               id="phone"
+              name="phone"
               pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
             />
           </fieldset>
           <fieldset class="fieldset">
-            <label for="mail" name="mail">Email</label>
+            <label for="mail">Email</label>
             <svg class="icon" title>
               <use href="./images/forms-icon.svg#icon-email"></use>
             </svg>
-            <input class="input-form" type="email" id="mail" />
+            <input class="input-form" type="email" id="mail" name="mail" />
           </fieldset>
-          <fieldset class="fieldset">
-            <label for="comment" name="comment">Komentarz</label>
+          <fieldset class="fieldset comment-fs">
+            <label for="comment">Komentarz</label>
             <input
               class="input-comment"
               type="text"
               id="text"
+              name="comment"
               placeholder="Wprowadź tekst"
             />
           </fieldset>
-          <label class="legal-checkbox" name="legal-checkbox">
-            <svg class="icon" title>
+          <label class="legal-checkbox">
+            <svg class="check-icon" width="16" height="15">
               <use href="./images/forms-icon.svg#icon-check"></use>
             </svg>
-            <input class="my-input" type="checkbox" id="legal" />
+            <input
+              class="my-input"
+              type="checkbox"
+              id="legal"
+              name="legal-checkbox"
+            />
             Oświadczam iż akceptuję
             <a class="reg-priv" href="#"> Regulamin</a> i
             <a class="reg-priv" href="#">Politykę Prywatności.</a>
           </label>
           <button class="submit" type="submit" name="submit">Wyślij</button>
         </form>
-        <!-- <form autocomplete="on">
-          <fieldset class="fieldset">
-            <label
-              >Imię<input class="input-form" type="name" name="name"
-            /></label>
-          </fieldset>
-          <fieldset class="fieldset">
-            <label
-              >Telefon<input class="input-form" type="phone" name="phone"
-            /></label>
-          </fieldset>
-          <fieldset class="fieldset">
-            <label
-              >E-mail<input class="input-form" type="mail" name="mail"
-            /></label>
-          </fieldset>
-          <fieldset class="fieldset">
-            <label
-              >Komentarz<input
-                class="input-form-comment"
-                type="text"
-                name="text"
-                placeholder="Wprowadź tekst"
-            /></label>
-          </fieldset>
-        </form> -->
       </div>
     </div>
     <script src="./js/modal.js"></script>
