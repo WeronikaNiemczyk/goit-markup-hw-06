@@ -717,33 +717,6 @@ nav .link {
   display: flex;
 }
 
-/* .fieldset {
-  position: relative;
-  width: 448px;
-  height: 40px;
-  margin-inline: 40px;
-  display: flex;
-  margin-bottom: 10px;
-}
-.input-form {
-  width: 448px;
-  height: 40px;
-}
-.fieldset label {
-  position: absolute;
-  width: 24px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
-
-  color: #757575;
-}
-.input-form-comment {
-  width: 448px;
-  width: 120px;
-} */
-
 .fieldset {
   position: relative;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -782,7 +755,7 @@ nav .link {
 .comment-fs {
   margin-bottom: 20px;
 }
-.my-form label {
+.label {
   position: absolute;
   top: -20px;
   font-weight: 400;
@@ -807,25 +780,63 @@ nav .link {
 input:focus {
   outline: 0;
 }
-
-.my-form .legal-checkbox {
-  position: static;
-  margin-left: 43px;
-  text-align: center;
+.my-form:has(input:focus) .fieldset:has(input:focus) {
+  border-color: var(--main-link-color);
 }
+
+.fieldset:has(input:focus) .icon {
+  fill: var(--main-link-color);
+}
+
 .my-input {
   font-size: 14px;
   line-height: 24px;
   color: #757575;
   position: relative;
 }
-
+.legal-checkbox {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-left: 40px;
+  position: relative;
+  cursor: pointer;
+  padding-left: 20px;
+}
 .legal-checkbox input {
+  position: absolute;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.legal-checkbox .checkmark {
+  position: absolute;
   width: 16px;
   height: 15px;
+  border: 2px solid #212121;
+  left: 0;
+  /* background-color: red; */
 }
 .check-icon {
-  position: relative;
+  position: absolute;
+  left: 2px;
+  top: 0;
+}
+
+.legal-checkbox input:checked .checkmark::after {
+  display: block;
+}
+.checkmark::after {
+  content: "";
+   position: absolute;
+  width: 12px;
+  height: 11px;
+  left: 0;
+  background-color: #2196f3;
+  display: none;
 }
 
 .reg-priv {

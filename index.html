@@ -416,7 +416,7 @@
             Zostaw swoje dane w formularzu poniżej
           </p>
           <fieldset class="fieldset">
-            <label for="name">Imię</label>
+            <label class="label" for="name">Imię</label>
             <svg class="icon" title>
               <use
                 href="./images/forms-icon.svg#icon-name"
@@ -427,7 +427,7 @@
             <input class="input-form" type="text" id="name" name="name" />
           </fieldset>
           <fieldset class="fieldset">
-            <label for="phone">Telefon</label>
+            <label class="label" for="phone">Telefon</label>
             <svg class="icon" title>
               <use href="./images/forms-icon.svg#icon-phone"></use>
             </svg>
@@ -440,14 +440,14 @@
             />
           </fieldset>
           <fieldset class="fieldset">
-            <label for="mail">Email</label>
+            <label class="label" for="mail">Email</label>
             <svg class="icon" title>
               <use href="./images/forms-icon.svg#icon-email"></use>
             </svg>
             <input class="input-form" type="email" id="mail" name="mail" />
           </fieldset>
           <fieldset class="fieldset comment-fs">
-            <label for="comment">Komentarz</label>
+            <label class="label" for="comment">Komentarz</label>
             <input
               class="input-comment"
               type="text"
@@ -457,9 +457,6 @@
             />
           </fieldset>
           <label class="legal-checkbox">
-            <svg class="check-icon" width="16" height="15">
-              <use href="./images/forms-icon.svg#icon-check"></use>
-            </svg>
             <input
               class="my-input"
               type="checkbox"
@@ -469,6 +466,10 @@
             Oświadczam iż akceptuję
             <a class="reg-priv" href="#"> Regulamin</a> i
             <a class="reg-priv" href="#">Politykę Prywatności.</a>
+            <span class="checkmark"></span>
+            <svg class="check-icon" width="11" height="8">
+              <use href="./images/forms-icon.svg#icon-check-icon"></use>
+            </svg>
           </label>
           <button class="submit" type="submit" name="submit">Wyślij</button>
         </form>
