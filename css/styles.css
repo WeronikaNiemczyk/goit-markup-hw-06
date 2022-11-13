@@ -109,6 +109,7 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  z-index: 2;
 }
 .close-btn {
   width: 18px;
@@ -736,6 +737,7 @@ nav .link {
 }
 .input-form {
   height: 40px;
+  width: 80%;
 }
 .input-comment {
   height: 120px;
@@ -746,8 +748,12 @@ nav .link {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: #212121;
+
   outline: 0;
+  border: none;
+  width: 100%;
+  resize: none;
 }
 .comment-fs {
   margin-bottom: 20px;
@@ -782,6 +788,11 @@ input:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.my-form:has(textarea:focus) .fieldset:has(textarea:focus) {
+  border-color: var(--main-link-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .fieldset:has(input:focus) .icon {
   fill: var(--main-link-color);
@@ -804,7 +815,7 @@ input:focus {
   margin-left: 40px;
   position: relative;
   cursor: pointer;
-  padding-left: 20px;
+  padding-left: 38px;
 }
 .legal-checkbox input {
   position: absolute;
@@ -819,12 +830,13 @@ input:focus {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
-  left: 0;
+  left: 15px;
+  top: -2px;
 }
 .check-icon {
   position: absolute;
-  left: 2px;
-  top: 0;
+  left: 17px;
+  top: 1px;
 }
 
 .checkmark::after {
@@ -871,4 +883,7 @@ input:focus {
   margin-top: 30px;
   cursor: pointer;
   color: #ffffff;
+}
+button:active .backdrop {
+  transform: translateY(100%);
 }
