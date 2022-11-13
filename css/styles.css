@@ -191,7 +191,6 @@ ul {
   line-height: 1.17;
   font-weight: 500;
   letter-spacing: 0.02em;
-  /* display: flex; */
   align-items: center;
   justify-content: space-between;
 }
@@ -246,7 +245,6 @@ nav .link {
   font-size: 16px;
   line-height: 1.17;
   color: var(--font-background-color);
-
   text-align: center;
 }
 .h4 {
@@ -740,7 +738,6 @@ nav .link {
   height: 40px;
 }
 .input-comment {
-  /* width: 448px; */
   height: 120px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -782,10 +779,14 @@ input:focus {
 }
 .my-form:has(input:focus) .fieldset:has(input:focus) {
   border-color: var(--main-link-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fieldset:has(input:focus) .icon {
   fill: var(--main-link-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .my-input {
@@ -817,8 +818,8 @@ input:focus {
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
+  border-radius: 2px;
   left: 0;
-  /* background-color: red; */
 }
 .check-icon {
   position: absolute;
@@ -826,19 +827,24 @@ input:focus {
   top: 0;
 }
 
-.legal-checkbox input:checked .checkmark::after {
-  display: block;
-}
 .checkmark::after {
   content: "";
-   position: absolute;
-  width: 12px;
-  height: 11px;
-  left: 0;
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: -2px;
+  border: 2px solid #2196f3;
+  border-radius: 2px;
   background-color: #2196f3;
   display: none;
+  top: -2px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.legal-checkbox input:checked ~ .checkmark::after {
+  display: block;
+}
 .reg-priv {
   text-decoration: none;
   color: #2196f3;
